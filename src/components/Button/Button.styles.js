@@ -12,9 +12,25 @@ export const StyledButton = styled.button`
   font-size: 16px;
   cursor: pointer;
   transition: 0.5s all ease-out;
+  &:hover {
+    background-color: ${(props) =>
+      props.variant !== 'outline' ? '#fff' : '#4caf50'};
+    color: ${(props) => (props.variant !== 'outline' ? '#4caf50' : '#fff')};
+  }
 `;
 
 export const FancyButton = styled(StyledButton)`
   background-image: linear-gradient(to right, #f6d465 0%, #fda085 100%);
   border: none;
 `;
+
+export const SubmitButton = styled(StyledButton).attrs({
+  type: 'submit',
+})`
+  box-shadow: 0 9px #999; // some distinct style is required
+`;
+
+// we can also set attrs as a function which will by default accept props as an argument
+// attrs((props) => ({
+// type : 'submit'
+// }))

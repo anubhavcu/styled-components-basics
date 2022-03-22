@@ -1,5 +1,8 @@
 import './App.css';
-import StyledButton, { FancyButton } from './components/Button/Button';
+import StyledButton, {
+  FancyButton,
+  SubmitButton,
+} from './components/Button/Button';
 
 function App() {
   return (
@@ -14,6 +17,10 @@ function App() {
         <br />
       </div>
       <FancyButton as='a'>Fancy Button</FancyButton>
+      <div>
+        <br />
+      </div>
+      <SubmitButton>Submit Button</SubmitButton>
     </div>
   );
 }
